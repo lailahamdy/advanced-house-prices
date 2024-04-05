@@ -8,6 +8,7 @@ import pandas as pd
 from sklearn.model_selection import cross_val_score
 from sklearn.linear_model import LinearRegression
 
+
 def read_data():
     cwd = os.getcwd()
     data_path = os.path.join(cwd, 'dataset/train.csv')
