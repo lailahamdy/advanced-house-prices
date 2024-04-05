@@ -1,9 +1,10 @@
 from sklearn import metrics
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+import preprocessing
 
 def train():
-	X,y = pipeline()
+	X,y = preprocessing.pipeline()
 	X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=33)
 
 	y_train= y_train.values.reshape(-1,1)
