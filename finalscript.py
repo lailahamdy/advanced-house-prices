@@ -1,6 +1,6 @@
 import importlib
 preprocess = importlib.import_module("preprocessing-script")
 modeling = importlib.import_module("modeling-script")
-predicting = importlib.import_module("predict")
-modeling.train()
-predicting.predict()
+data=preprocess.read_data()
+x,y=preprocess.get_xy(data)
+model=modeling.train()
