@@ -13,5 +13,10 @@ def train():
 	
 	LR = LinearRegression()
 	model = LR.fit(X_train,y_train)
-	
+	preds = model.predict(X_test)
+
+	print('MAE:', metrics.mean_absolute_error(y_test, preds))
+	print('MSE:', metrics.mean_squared_error(y_test, preds))
+	print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test, preds)))	
+
 	return model
